@@ -39,6 +39,7 @@ struct ContentView: View {
                                     ProductItemView(product: product)
                                         .onTapGesture {
                                             withAnimation(.easeOut) {
+                                                feedback.impactOccurred()
                                                 shop.selectedProduct = product
                                                 shop.showingProduct = true
                                             }
